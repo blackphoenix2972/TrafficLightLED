@@ -1,0 +1,39 @@
+int RedLed = 15;
+int YellowLed = 16;
+int GreenLed = 17;
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(RedLed, OUTPUT);
+  pinMode(GreenLed, OUTPUT);
+  pinMode(YellowLed, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+ RedLight();
+ delay(1000);
+  YellowLight();
+ delay(1000);
+  GreenLight();
+ delay(1000);
+ 
+}
+
+void GreenLight() {
+  digitalWrite(RedLed, LOW);
+  digitalWrite(YellowLed, LOW);
+  digitalWrite(GreenLed, HIGH);
+  }
+  void RedLight() {
+  digitalWrite(RedLed, HIGH);
+  digitalWrite(YellowLed, LOW);
+  digitalWrite(GreenLed, LOW);
+  }
+
+   void YellowLight() {
+  digitalWrite(RedLed, LOW);
+  digitalWrite(YellowLed, HIGH);
+  digitalWrite(GreenLed, LOW);
+  }
+  
